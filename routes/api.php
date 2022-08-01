@@ -26,7 +26,7 @@ Route::group(['middleware' => ['auth:sanctum']], function() {
   Route::get('articles/{id}', [ArticleController::class, 'show']);
   Route::post('articles/create', [ArticleController::class, 'store']);
   Route::patch('articles/{id}', [ArticleController::class, 'update']);
-  Route::delete('articles/{id}', [ArticleController::class, 'delete']);
+  Route::delete('articles/{id}', [ArticleController::class, 'destroy']);
   Route::patch('articles/{id}/voting', [ArticleController::class, 'voting']);
   Route::delete('articles/{id}/voting-delete', [ArticleController::class, 'deleteVoting']);
 
